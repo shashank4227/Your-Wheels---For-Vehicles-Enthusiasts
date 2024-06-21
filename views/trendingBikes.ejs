@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Wheels - Trending Bikes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="img/tab_logo.png" />
+    <link rel="stylesheet" href="css/latest.css" />
+    <link rel="stylesheet" href="css/trending.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header style="background-color: black">
+      <nav>
+        <div class="logoMenu">
+          <div>
+            <a href="#" class="openbtn" onclick="openNav()">
+              <i class="fa-solid fa-bars"></i
+            ></a>
+          </div>
+          <img src="img/logo.png" class="logo" alt="" />
+        </div>
+
+        <div id="mySidebar" class="sidebar">
+          <!-- Button to close the sidebar -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >×</a
+          >
+          <!-- Links -->
+          <a href="/owned">Owned Vehicles</a>
+          <a href="/latestCars">Latest Releases</a>
+          <a href="futureCars">Future Releases</a>
+          <a href="/trendingCars">Trending Vehicles</a>
+          <a href="/buy_and_sell_cars">Buy Used Vehicles</a>
+          <a href="/sell">Sell Used Vehicles</a>
+          <a href="/rent">Rent Vehicles</a>
+          <a href="/showrooms">Show Rooms</a>
+          <a href="/seriveCenters">Service Centres</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+        <div class="menu">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/loans">Loans</a>
+          <a href="/reviews">Reviews</a>
+        </div>
+
+        <div class="social">
+          <a href="/search" class="tooltip"
+            ><i class="fa-solid fa-magnifying-glass"
+              ><span class="tooltiptext">Search</span></i
+            ></a
+          >
+          <a href="#" class="tooltip"
+            ><i class="fa-solid fa-bell"
+              ><span class="tooltiptext">Notifications</span></i
+            ></a
+          >
+          <div class="popup" id="notificationPopup">
+            <h1>Notifications</h1>
+            <hr />
+            <h3>Latest Vehicle Releases</h3>
+            <p>Notification content goes here...</p>
+            <h3>Upcoming Vehicle Releases</h3>
+            <p>Notification content goes here...</p>
+            <h3>Upcoming Vehicle Releases</h3>
+            <p>Notification content goes here...</p>
+            <h3>Upcoming Vehicle Releases</h3>
+            <p>Notification content goes here...</p>
+          </div>
+          <a href="/login" class="tooltip"
+            ><i class="fa-solid fa-user">
+              <span class="tooltiptext">Login</span>
+            </i></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main class="z-index">
+      <section class="section featured-car" id="featured-car">
+        <div class="container">
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Trending bikes</h2>
+
+            <a href="#" class="featured-car-link">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="featured-car-list">
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img
+                    src="img/bike.jpg"
+                    alt="Toyota RAV4 2021"
+                    loading="lazy"
+                    width="440"
+                    height="300"
+                    class="w-100"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Kawasaki RAV4</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">2 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">26.1km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>Rs.4,00,000</strong>
+                    </p>
+
+                    <button
+                      class="btn fav-btn"
+                      aria-label="Add to favourite list"
+                    >
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img
+                    src="img/bike7.jpeg"
+                    alt="BMW 3 Series 2019"
+                    loading="lazy"
+                    width="440"
+                    height="300"
+                    class="w-100"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Ducati Rx</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">2 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">18.2km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>Rs.5,00,000</strong>
+                    </p>
+
+                    <button
+                      class="btn fav-btn"
+                      aria-label="Add to favourite list"
+                    >
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img
+                    src="img/bike8.jpeg"
+                    alt="Volkswagen T-Cross 2020"
+                    loading="lazy"
+                    width="440"
+                    height="300"
+                    class="w-100"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">KTM Duke</a>
+                    </h3>
+
+                    <data class="year" value="2020">2020</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">2 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">25.3km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>Rs.2,00,000</strong>
+                    </p>
+
+                    <button
+                      class="btn fav-btn"
+                      aria-label="Add to favourite list"
+                    >
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img
+                    src="img/bike5.jpeg"
+                    alt="Cadillac Escalade 2020"
+                    loading="lazy"
+                    width="440"
+                    height="300"
+                    class="w-100"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Heisenberg G2</a>
+                    </h3>
+
+                    <data class="year" value="2020">2020</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">2 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">17.7km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>Rs.6,00,000</strong>
+                    </p>
+
+                    <button
+                      class="btn fav-btn"
+                      aria-label="Add to favourite list"
+                    >
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img
+                    src="img/bike4.jpeg"
+                    alt="BMW 4 Series GTI 2021"
+                    loading="lazy"
+                    width="440"
+                    height="300"
+                    class="w-100"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Royal Enfield</a>
+                    </h3>
+
+                    <data class="year" value="2021">2021</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">2 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">27.6km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>Rs.2,00,000</strong>
+                    </p>
+
+                    <button
+                      class="btn fav-btn"
+                      aria-label="Add to favourite list"
+                    >
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img
+                    src="img/bike9.webp"
+                    alt="BMW 4 Series 2019"
+                    loading="lazy"
+                    width="440"
+                    height="300"
+                    class="w-100"
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Jawa 4 Series</a>
+                    </h3>
+
+                    <data class="year" value="2019">2019</data>
+                  </div>
+
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+
+                      <span class="card-item-text">2 People</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+
+                      <span class="card-item-text">27.2km / 1-litre</span>
+                    </li>
+
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-price-wrapper">
+                    <p class="card-price">
+                      <strong>Rs.3,00,000</strong>
+                    </p>
+
+                    <button
+                      class="btn fav-btn"
+                      aria-label="Add to favourite list"
+                    >
+                      <ion-icon name="heart-outline"></ion-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <a href="/trendingCars"
+      ><div class="vehicle">
+        <i id="icon" class="fa-solid fa-car-side"></i></div
+    ></a>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+.innerDiv {
+  margin: 200px 50px 100px 50px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 20px;
+}

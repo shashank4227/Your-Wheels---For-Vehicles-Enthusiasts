@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Wheels - Account Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="img/tab_logo.png" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/accountDetails.css" />
+  </head>
+  <body>
+    <header style="background-color: black">
+      <nav>
+        <div class="logoMenu">
+          <img src="img/logo.png" class="logo" alt="" />
+        </div>
+        <div class="menu">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/loans">Loans</a>
+          <a href="/reviews">Reviews</a>
+        </div>
+
+        <div class="social">
+          <a href="/search" class="tooltip"
+            ><i class="fa-solid fa-magnifying-glass"
+              ><span class="tooltiptext">Search</span></i
+            ></a
+          >
+          <a href="/notification" class="tooltip"
+            ><i class="fa-solid fa-bell"
+              ><span class="tooltiptext">Notifications</span></i
+            ></a
+          >
+
+          <a href="/login" class="tooltip"
+            ><i class="fa-solid fa-user">
+              <span class="tooltiptext">Login</span>
+            </i></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="outerDiv">
+        <div class="sideMenu">
+          <h3>General</h3>
+          <div class="option">
+            <i class="fa-solid fa-user"></i>
+            <a href="/accountDetails">Account Details</a>
+          </div>
+          <div class="option">
+            <i class="fa-solid fa-pen"></i>
+            <a href="/updateDetails">Update Details</a>
+          </div>
+
+          <form action="/logout" method="GET">
+            <button type="submit" class="logout">Logout</button>
+          </form>
+        </div>
+        <div class="details">
+          <a href="/accountDetails">Go back</a>
+          <h1>Your Vehicles on sale</h1>
+          <p>See your details of vehicles on sale here</p>
+          <hr />
+          <br />
+          <ul>
+            <% sellVehiclesDetails.forEach(vehicle => { %>
+            <li>
+              ><br />
+              <span>Name : <%= vehicle.name %> </span>
+              <span>Email : <%= vehicle.emailID %></span><br />
+              <span>Vehicle Type: <%= vehicle.vehicleType %></span><br />
+              <span>Location : <%= vehicle.location %></span><br />
+              <span>Fuel Type : <%= vehicle.fuelType %></span><br />
+              <span>Resgistration Year : <%= vehicle.registrationYear %></span
+              ><br />
+              <span>Vehicle Name : <%= vehicle.vehicleName %></span><br />
+              <span>Vehicle Model : <%= vehicle.vehicleModel %></span><br />
+
+              <br />
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

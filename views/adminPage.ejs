@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="css/adminPage.css" />
+  </head>
+  <body>
+    <div class="outerDiv">
+      <div class="innerDiv">
+        <h1>Admin Page</h1>
+        <div id="user-list">
+          <h2>Users</h2>
+          <div class="cardContainer">
+            <form action="/create" method="POST">
+              <label for="username">Username:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                required
+              />
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+              <button type="submit">Create User</button>
+            </form>
+            <% users.forEach(user => { %>
+            <div class="card">
+              <p>Username :<%= user.username %></p>
+              <div class="crudButtons">
+                <form action="/update/<%= user.username %>" method="POST">
+                  <label for="newUsername">New Username:</label>
+                  <input
+                    type="text"
+                    id="newUsername"
+                    name="newUsername"
+                    placeholder="Enter new username"
+                    required
+                  />
+                  <label for="newPassword">New Password:</label>
+                  <input
+                    type="password"
+                    id="newPassword"
+                    name="newPassword"
+                    placeholder="Enter new password"
+                    required
+                  />
+                  <button type="submit">Update</button>
+                </form>
+                <form action="/delete/<%= user.username %>" method="POST">
+                  <button type="submit">Delete</button>
+                </form>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+        <div id="employee-list">
+          <h2>Employees</h2>
+          <div class="cardContainer">
+            <form action="/employeecreateByAdmin" method="POST">
+              <label for="employeeUsername">Username:</label>
+              <input
+                type="text"
+                id="employeeUsername"
+                name="employeeUsername"
+                placeholder="Enter employee username"
+                required
+              />
+              <label for="employeepPssword">Password:</label>
+              <input
+                type="password"
+                id="employeePassword"
+                name="employeePassword"
+                placeholder="Enter employee password"
+                required
+              />
+              <button type="submit">Create Employee</button>
+            </form>
+            <% employees.forEach(employee => { %>
+            <div class="card">
+              <p>Username :<%= employee.employeeUsername %></p>
+              <div class="crudButtons">
+                <form
+                  action="/employeeupdateByAdmin/<%= employee.employeeUsername %>"
+                  method="POST"
+                >
+                  <label for="newEmployeeUsername">New Username:</label>
+                  <input
+                    type="text"
+                    id="newEmployeeUsername"
+                    name="newUsername"
+                    placeholder="Enter new employee username"
+                    required
+                  />
+                  <label for="newEmployeePassword">New Password:</label>
+                  <input
+                    type="password"
+                    id="newEmployeePassword"
+                    name="newPassword"
+                    placeholder="Enter new employee password"
+                    required
+                  />
+                  <button type="submit">Update</button>
+                </form>
+                <form
+                  action="/employeedeleteByAdmin/<%= employee.employeeUsername %>"
+                  method="POST"
+                >
+                  <button type="submit">Delete</button>
+                </form>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+        <a href="/admin-logout">
+          <button>Logout</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Wheels - Car Reviews</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="img/tab_logo.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reviews.css" />
+  </head>
+  <body>
+    <header style="background-color: black">
+      <nav>
+        <div class="logoMenu">
+          <div>
+            <a href="#" class="openbtn" onclick="openNav()">
+              <i class="fa-solid fa-bars"></i
+            ></a>
+          </div>
+          <img src="img/logo.png" class="logo" alt="" />
+        </div>
+
+        <div id="mySidebar" class="sidebar">
+          <!-- Button to close the sidebar -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >×</a
+          >
+          <!-- Links -->
+          <a href="/owned">Owned Vehicles</a>
+          <a href="/latestCars">Latest Releases</a>
+          <a href="futureCars">Future Releases</a>
+          <a href="/trendingCars">Trending Vehicles</a>
+          <a href="/buy_and_sell_cars">Buy Used Vehicles</a>
+          <a href="/sell">Sell Used Vehicles</a>
+          <a href="/rent">Rent Vehicles</a>
+          <a href="/showrooms">Show Rooms</a>
+          <a href="/seriveCenters">Service Centres</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+        <div class="menu">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/loans">Loans</a>
+          <a href="/reviews">Reviews</a>
+        </div>
+        <div class="social">
+          <a href="/search" class="tooltip"
+            ><i class="fa-solid fa-magnifying-glass"
+              ><span class="tooltiptext">Search</span></i
+            ></a
+          >
+          <a href="/notification" class="tooltip"
+            ><i class="fa-solid fa-bell"
+              ><span class="tooltiptext">Notifications</span></i
+            ></a
+          >
+         
+          <a href="/login" class="tooltip"
+            ><i class="fa-solid fa-user">
+              <span class="tooltiptext">Login</span>
+            </i></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="review-container">
+        <h1>Leave a Review</h1>
+          <form action="/submit-review" method="post">
+            <div class="form-container">
+              <div class="formElement">
+                <label for="your-name"></label>
+                <input type="text" id="your-name" name="your-name" placeholder="Enter your name" required/>  
+              </div>
+              <div class="formElement">
+                <label for="vehicle-type"></label>
+                <select id="vehicle-type" name="vehicle-type">
+                  <option value="">Select Vehicle Type</option>
+                  <option value="car">Car</option>
+                  <option value="motorcycle">Motorcycle</option>
+                </select>
+              </div>
+              <div class="formElement">
+                <label for="rating"></label>
+                <select id="rating" name="rating">
+                  <option value="">Select Rating</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+
+                </select>
+              </div>
+              <div class="formElement">
+                <label for="vehicle-name"></label>
+                <input type="text" id="vehicle-name" name="vehicle-name" placeholder="Enter vehicle name" required/>
+              </div>
+              <div class="formElement">
+                <label for="review-title"></label>
+                <input type="text" id="review-title" name="review-title" placeholder="Enter Review Title" required/>
+              </div>
+              <div class="formElement">
+                <label for="vehicle-model"></label>
+                <input type="text" id="vehicle-name" name="vehicle-model" placeholder="Enter vehicle model" required />
+              </div>
+              <div class="formElement">
+                <label for="date">Select Date</label>
+                <input type="date" id="date" name="">
+              </div>
+            </div>
+            
+            <div class="formElement">
+              <label for="comment"></label><br />
+              <textarea
+                id="comment"
+                name="comment"
+                rows="4"
+                cols="50"
+                placeholder="Enter your comment here"
+                required
+              ></textarea>
+            </div>
+           
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="review-container">
+          <div class="review-card-container">
+            <h1>User Reviews</h1>
+            <div class="card-container">
+              <div class="review-card">
+                <div class="image"><img src="img/review1.webp" /></div>
+                
+                <div class="review-content">
+                  <h2>Ford Endeavour</h2>
+                  <hr>
+                  <h3>Exceptional Experience with the Ford Endeavour</h3>
+                  <p>
+                    "Your Wheels made finding my Ford Endeavour effortless. It perfectly suits my budget and offers an exceptional driving experience. From its robust build to its advanced features, I couldn't be happier with my purchase. Highly recommend!"
+                  </p>
+                  <h4>By Emily Johnson</h4>
+                  <p>on Mar 11 2024 | 200 views</p>
+                  <div class="star">
+                    
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    
+                </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="image">
+                  <img src="img/review2.webp" />
+                </div>
+                <div class="review-content">
+                  <h2>Alto 800</h2>
+                  <hr>
+                  <h3>Compact Comfort: Alto 800 Review</h3>
+                  <p>
+                    "Your Wheels pointed me towards the Alto 800, and it's been a delight. Affordable and efficient, it's perfect for city commutes. The compact design doesn't compromise on comfort, and the fuel efficiency is impressive. Thank you, Your Wheels, for the recommendation!"
+                  </p>
+                  <h4>By Mukesh Kumar</h4>
+                    <p>on Nov 4 2022 | 467 views</p>
+                    <div class="star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="image">
+                  <img src="img/review3.jpg" />
+                </div>
+                <div class="review-content">
+                  <h2>Mahindra Thar</h2>
+                  <hr>
+                  <h3>Adventure Awaits: Mahindra Thar Review</h3>
+                  <p>
+                    "Thanks to Your Wheels, I discovered the Mahindra Thar, and it's a game-changer. Its rugged design and off-road capabilities make every journey an adventure. The spacious cabin and modern features add to the comfort and convenience. I couldn't be happier with my choice!"
+                  </p>
+                  <h4>By Neha Sharma</h4>
+                    <p>on Apr 12 2023 | 304 views</p>
+                    <div class="star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="image">
+                  <img src="img/review4.webp" />
+                </div>
+                <div class="review-content">
+                  <h2>BMW X7</h2>
+                  <hr>
+                  <h3>Customer Spotlight: BMW X7 Series</h3>
+                  <p>
+                    "The BMW X7 Series recommended by Your Wheels exceeded my expectations. Its luxurious interior, powerful performance, and advanced features make every drive a delight. Thanks to Your Wheels, I found the perfect SUV for my needs. Highly recommended!"
+                  </p>
+                  <h4>By Rakesh Gupta</h4>
+                    <p>on Nov 4 2022 | 467 views</p>
+                    <div class="star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="image">
+                  <img src="img/review5.webp" />
+                </div>
+                <div class="review-content">
+                  <h2>Renault Kwid</h2>
+                  <hr>
+                  <h3>Compact Marvel: Renault Kwid </h3>
+                  <p>
+                    "Your Wheels led me to the Renault Kwid, and it's been a game-changer. Despite its compact size, it offers impressive features and a comfortable ride. Affordable yet stylish, it's the perfect city companion. Thanks, Your Wheels, for the great recommendation!"
+                  </p>
+                  <h4>By Priya Patel</h4>
+                    <p>on May 31 2023 | 201 views</p>
+                    <div class="star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="image">
+                  <img src="img/review6.webp" />
+                </div>
+                <div class="review-content">
+                  <h2>Mahindra Scorpio</h2>
+                  <hr>
+                  <h3>Powerful Performance: Mahindra Scorpio</h3>
+                  <p>
+                    "Your Wheels introduced me to the Mahindra Scorpio, and it has exceeded all my expectations. With its rugged design and powerful performance, it's truly a beast on the road. The spacious interior and advanced features make every journey comfortable and enjoyable. Thanks to Your Wheels for the fantastic recommendation!"
+                  </p>
+                  <h4>By Arjun Singh</h4>
+                    <p>on Nov 10 2022 | 300 views </p>
+                    <div class="star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="image">
+                  <img src="img/review7.webp" />
+                </div>
+                <div class="review-content">
+                  <h2>Maruti Dzire</h2>
+                  <hr>
+                  <h3>Elegance Redefined: Maruti Dzire</h3>
+                  <p>
+                    "Your Wheels steered me towards the Maruti Dzire, and I'm thrilled with my choice. Its sleek design, fuel efficiency, and advanced features make it stand out in its class. From city commutes to long drives, it offers unmatched comfort and reliability. Thanks to Your Wheels for the impeccable recommendation!"
+                  </p>
+                  <h4>By leon</h4>
+                    <p>on Feb 28 2024 | 20 views</p>
+                    <div class="star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="image">
+                  <img src="img/review8.webp" />
+                </div>
+                <div class="review-content">
+                  <h2>Toyata Fortuner</h2>
+                <hr>
+                  <h3>A Rugged Adventure: Toyota Fortuner</h3>
+                  <p>
+                    The Toyota Fortuner, recommended by Your Wheels website, delivers on its promise of versatility and reliability. Its rugged design, robust performance, and spacious interior make it an ideal choice for urban commuting and off-road escapades. With advanced safety features and dependable engineering, it's a compelling SUV for those seeking adventure and comfort.
+                  </p>
+                  <h4>By Vinay Reddy </h4>
+                    <p>on may 22 2021 | 418 views</p>
+                    <div class="star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    <a href="/reviewBikes"
+    ><div class="vehicle">
+      <i id="icon" class="fa-solid fa-motorcycle"></i></div
+  ></a>
+    <script src="js/script.js"></script>
+  </body>
+</html>

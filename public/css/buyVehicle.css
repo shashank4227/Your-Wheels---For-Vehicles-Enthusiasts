@@ -1,0 +1,9 @@
+.searchAndFilters input {
+  width: 83%;
+  justify-content: center;
+}
+.searchBar {
+  width: 60%;
+  margin-left: 200px;
+  margin-top: 50px;
+}

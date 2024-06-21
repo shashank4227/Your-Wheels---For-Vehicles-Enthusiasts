@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental Form</title>
+    <link rel="stylesheet" href="css/rentNow.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Car Rental Form</h2>
+      <form
+        action="/submit-rent-details"
+        method="post"
+        enctype="multipart/form-data"
+        id="carRentalForm"
+      >
+        <input
+          type="hidden"
+          id="car-query"
+          name="car-query"
+          value="<%= car.query %>"
+        />
+        <input
+          type="hidden"
+          id="car-location"
+          name="car-location"
+          value="<%= car.location %>"
+        />
+        <input
+          type="hidden"
+          id="car-address"
+          name="car-address"
+          value="<%= car.address %>"
+        />
+        <input
+          type="hidden"
+          id="car-image"
+          name="car-image"
+          value="<%= car.path %>"
+        />
+
+        <p><%= car.image %></p>
+        <div class="form-group">
+          <label for="name">Enter User Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="pickup-location">Pickup Location:</label>
+          <input
+            type="text"
+            id="pickup-location"
+            name="pickup-location"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="dropoff-location">Drop-off Location:</label>
+          <input
+            type="text"
+            id="dropoff-location"
+            name="dropoff-location"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="pickup-date">Pickup Date and Time:</label>
+          <input
+            type="datetime-local"
+            id="pickup-date"
+            name="pickup-date"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="dropoff-date">Drop-off Date and Time:</label>
+          <input
+            type="datetime-local"
+            id="dropoff-date"
+            name="dropoff-date"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="aadhar-card">Upload Aadhar Card Photo:</label>
+          <div class="file-upload">
+            <input type="file" id="aadhar-card" name="aadhar-card" required />
+            <button
+              type="button"
+              onclick="document.getElementById('aadhar-card').click()"
+            >
+              Browse
+            </button>
+            <div id="aadhar-preview" class="preview-container"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="driving-license">Upload Driving License Photo:</label>
+          <div class="file-upload">
+            <input
+              type="file"
+              id="driving-license"
+              name="driving-license"
+              required
+            />
+            <button
+              type="button"
+              onclick="document.getElementById('driving-license').click()"
+            >
+              Browse
+            </button>
+            <div id="driving-preview" class="preview-container"></div>
+          </div>
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script src="js/rentNow.js"></script>
+  </body>
+</html>

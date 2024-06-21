@@ -1,0 +1,99 @@
+.outerDiv {
+  margin-top: 100px;
+  margin-left: 50px;
+  display: flex;
+}
+.sideMenu h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: grey;
+  font-size: 15px;
+}
+body {
+  background-color: rgb(241, 241, 241);
+}
+.sideMenu a {
+  color: black;
+}
+#highlight {
+  background-color: rgb(212, 212, 212);
+  border-radius: 10px;
+}
+.option {
+  padding: 5px 20px 5px 20px;
+  width: 270px;
+  color: black;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.insideButtons {
+  padding: 5px 20px 5px 20px;
+  width: 270px;
+  color: black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 179, 255);
+  margin-top: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+.insideButtons a {
+  color: black;
+  text-align: center;
+}
+.option i {
+  margin-right: 10px;
+}
+.logout {
+  width: 270px;
+  background-color: #dd5746;
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  margin-top: 30px;
+}
+.logout:hover,
+#highlight:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.details {
+  padding: 30px;
+  height: 490px;
+  width: 80%;
+  margin: 50px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: auto;
+}
+.details h1 {
+  font-size: 25px;
+}
+.details p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.username {
+  display: flex;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 10px 300px 10px 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.update {
+  background-color: black;
+  border-radius: 10px;
+  height: 50px;
+  color: yellow;
+}
+label {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+.card {
+  height: 150px;
+  width: 150px;
+}
+.card .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  object-fit: cover;
+  object-position: center;
+  padding: 10px;
+  height: 70px;
+  width: 120px;
+}

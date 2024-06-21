@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Wheels - Search Vehicles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="img/tab_logo.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/rent.css" />
+    <link rel="stylesheet" href="css/search.css" />
+  </head>
+  <body>
+    <header style="background-color: black">
+      <nav>
+        <div class="logoMenu">
+          <div>
+            <a href="#" class="openbtn" onclick="openNav()">
+              <i class="fa-solid fa-bars"></i
+            ></a>
+          </div>
+          <img src="img/logo.png" class="logo" alt="" />
+        </div>
+
+        <div id="mySidebar" class="sidebar">
+          <!-- Button to close the sidebar -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >×</a
+          >
+          <!-- Links -->
+          <a href="/owned">Owned Vehicles</a>
+          <a href="/latestCars">Latest Releases</a>
+          <a href="futureCars">Future Releases</a>
+          <a href="/trendingCars">Trending Vehicles</a>
+          <a href="/buy_and_sell_cars">Buy Used Vehicles</a>
+          <a href="/sell">Sell Used Vehicles</a>
+          <a href="/rent">Rent Vehicles</a>
+          <a href="/showrooms">Show Rooms</a>
+          <a href="/seriveCenters">Service Centres</a>
+          <a href="/faqs">FAQs</a>
+        </div>
+        <div class="menu">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/loans">Loans</a>
+          <a href="/reviews">Reviews</a>
+        </div>
+
+        <div class="social">
+          <a href="/search" class="tooltip"
+            ><i class="fa-solid fa-magnifying-glass"
+              ><span class="tooltiptext">Search</span></i
+            ></a
+          >
+          <a href="/notification" class="tooltip"
+            ><i class="fa-solid fa-bell"
+              ><span class="tooltiptext">Notifications</span></i
+            ></a
+          >
+          <a href="/login" class="tooltip"
+            ><i class="fa-solid fa-user">
+              <span class="tooltiptext">Login</span>
+            </i></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+        <div class="contentParent">
+            <div class="content">
+              <div>
+                <h1>Vehicle Rentals</h1>
+              </div>
+              <div class="searchAndFilters">
+                <form action="/findRent" method="GET" class="Form"> 
+                  <div class="searchBar">
+                    <label for="carName"></label>
+                    <input
+                      type="text"
+                      id="carName"
+                      name="query" 
+                      placeholder="Enter Vehicle Name"
+                      aria-label="Search for vehicles"              />
+                    <button type="submit">Search</button>
+                  </div>
+                <div class="filters">
+                  <select name="location" id="location">
+                    <option value="">Select location</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                  </select>
+                  <div>
+                    <select name="type" id="type" class="filter">
+                      <option value="">Select Vehicle Type</option>
+                      <option value="car">Car</option>
+                      <option value="bike">Bike</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+
+    <div class="results-container">
+      <div class="results">
+        <h2>Search Results</h2>
+        <div class="cards-container">
+          <% if (rentResults.length === 0) { %>
+          <p>No Results found</p>
+          <% } %> <% rentResults.forEach(rent => { %>
+          <div class="card" >
+            <div class="img-container">
+              <img src="<%= rent.path %>" alt="Brand Image" />
+            </div>
+            <h3><%= rent.query %></h3>
+            <p>Location: <%=rent.location %></p>
+            <p>Address: <%= rent.address %></p>
+            <a href="/rentNo?query=<%= encodeURIComponent(rent.query) %>&location=<%= encodeURIComponent(rent.location) %>&address=<%= encodeURIComponent(rent.address) %>&path=<%= encodeURIComponent(rent.path) %>" style="width: 100%;">
+                <b>RENT NOW</b>
+              </a>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

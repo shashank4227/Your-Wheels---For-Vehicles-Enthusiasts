@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  justify-items: left;
+  align-items: flex-start;
+}
+.text h1 {
+  width: 600px;
+}
+.text input {
+  height: 30px;
+  width: 300px;
+  background-color: black;
+  border: 2px solid white;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 20px 20px 20px;
+  color: white;
+  animation: fadeLeftToRight 1.5s ease-out;
+}
+.text button {
+  padding: 10px 30px;
+  background-color: #dd0707;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #dd0707;
+  transition: 0.3s;
+  width: 300px;
+  animation: fadeLeftToRight 1.5s ease-out;
+  cursor: pointer;
+}
+.text button:hover {
+  background-color: transparent;
+}
+@keyframes fadeLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.loginOptions {
+  width: 300px;
+  display: flex;
+}
+.loginOptions button {
+  width: 45%;
+  margin-left: 10px;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+.buttons button {
+  margin-bottom: 20px;
+}
+#forgotPass {
+  font-size: 12px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#forgotPass:hover {
+  text-decoration: underline;
+}
+body .hero .text h1,
+body .hero .text p {
+  margin: 0px;
+}
+.signupbutton {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  padding: 10px 30px;
+  width: 300px;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  animation: fadeLeftToRight 1.5s ease-out;
+  border: 2px solid red;
+}
+.signupbutton:hover {
+  background-color: transparent;
+}
+.signup-button {
+  margin-top: 20px;
+}

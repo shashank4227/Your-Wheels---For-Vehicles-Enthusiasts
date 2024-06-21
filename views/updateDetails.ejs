@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Wheels - Account Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="img/tab_logo.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/accountDetails.css" />
+  </head>
+  <body>
+    <header style="background-color: black">
+      <nav>
+        <div class="logoMenu">
+          <img src="img/logo.png" class="logo" alt="" />
+        </div>
+        <div class="menu">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/loans">Loans</a>
+          <a href="/reviews">Reviews</a>
+        </div>
+
+        <div class="social">
+          <a href="/search" class="tooltip"
+            ><i class="fa-solid fa-magnifying-glass"
+              ><span class="tooltiptext">Search</span></i
+            ></a
+          >
+          <a href="/notification" class="tooltip"
+            ><i class="fa-solid fa-bell"
+              ><span class="tooltiptext">Notifications</span></i
+            ></a
+          >
+          <a href="/login" class="tooltip"
+            ><i class="fa-solid fa-user">
+              <span class="tooltiptext">Login</span>
+            </i></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="outerDiv">
+        <div class="sideMenu">
+          <h3>General</h3>
+          <div class="option">
+            <i class="fa-solid fa-user"></i>
+            <a href="/accountDetails">Account Details</a>
+          </div>
+          <div id="highlight" class="option">
+            <i class="fa-solid fa-pen"></i>
+            <a href="/updateDetails">Update Details</a>
+          </div>
+          <form action="/logout" method="GET">
+            <button type="submit" class="logout">Logout</button>
+          </form>
+        </div>
+        <div class="details">
+          <h1>Update Details</h1>
+          <p>Manage your profile</p>
+          <hr />
+          <br />
+          <form action="/update" method="POST">
+            <label for="newUsername"><b>New username</b></label>
+            <input
+              type="text"
+              id="newUsername"
+              name="newUsername"
+              placeholder="Enter New Username"
+            /><br />
+            <label for="newPassword"><b>New password</b></label>
+            <input
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              placeholder="Enter New Password"
+            /><br />
+            <label for="confirmNewPassword"><b>Confirm password</b></label>
+            <input
+              type="password"
+              id="confirmNewPassword"
+              name="confirmNewPassword"
+              placeholder="Confirm New Password"
+            /><br />
+            <br />
+            <button type="submit" class="update"><b>UPDATE</b></button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

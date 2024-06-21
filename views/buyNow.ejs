@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy a Vehicle</title>
+    <link rel="stylesheet" href="css/buyNow.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Buy a Vehicle</h2>
+      <form action="/submit-buy-details" method="post">
+        <label for="vehicle">Vehicle Model:</label>
+        <input type="text" id="vehicle" name="vehicle" />
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" />
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" />
+
+        <label for="fuelType">Fuel Type: </label>
+        <input type="text" id="fuelType" name="fuelType" />
+
+        <label for="name">Your Username:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

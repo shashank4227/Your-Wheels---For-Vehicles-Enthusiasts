@@ -1,0 +1,70 @@
+.Form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchAndFilters {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.searchBar {
+  padding: 0;
+  background-color: black;
+  border-radius: 20px;
+}
+.searchAndFilters input {
+  margin: 0;
+  border-radius: 20px 0 0 20px;
+  width: 400px;
+  padding: 10px 10px 10px 20px;
+}
+
+.searchAndFilters button {
+  margin: 0;
+  height: 45px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  cursor: pointer;
+}
+.searchAndFilters select {
+  width: fit-content;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  padding: 10px 0 10px 10px;
+  margin: 20px 20px 20px 20px;
+}
+.filters {
+  display: flex;
+}
+
+.img-container img {
+  object-fit: contain;
+  object-position: center;
+}
+.card a {
+  width: 100%;
+  background-color: rgb(0, 166, 255);
+  border: 0 0 20px 20px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

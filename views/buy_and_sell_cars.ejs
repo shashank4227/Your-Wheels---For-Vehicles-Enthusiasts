@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Wheels - Buy and Sell Cars</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/buy_and_sell.css" />
+    <link rel="stylesheet" href="css/buy.css" />
+    <link rel="stylesheet" href="css/rent.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/buyVehicle.css" />
+  </head>
+  <body
+    style="
+      background-image: url('buy_and_sell_img/bg.jpg');
+      background-color: #080809;
+      background-repeat: no-repeat;
+    "
+  >
+    <header class="header">
+      <div id="menu-btn" class="fa-solid fa-bars"></div>
+      <div class="logoMenu">
+        <div>
+          <a href="#" class="openbtn" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i
+          ></a>
+        </div>
+        <a href="#">
+          <img src="buy_and_sell_img/logo.png" class="logo" alt=""
+        /></a>
+      </div>
+
+      <div id="mySidebar" class="sidebar">
+        <!-- Button to close the sidebar -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <!-- Links -->
+        <a href="/owned">Owned Vehicles</a>
+        <a href="/latestCars">Latest Releases</a>
+        <a href="/futureCars.">Future Releases</a>
+        <a href="/trendingCars">Trending Vehicles</a>
+        <a href="/buy_and_sell_cars">Buy Used Vehicles</a>
+        <a href="/sell">Sell Used Vehicles</a>
+        <a href="/rent">Rent Vehicles</a>
+        <a href="/showrooms">Show Rooms</a>
+        <a href="/seriveCenters">Service Centres</a>
+        <a href="/faqs">FAQs</a>
+      </div>
+      <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/loans">Loans</a>
+        <a href="/reviews">Reviews</a>
+      </nav>
+
+      <div class="social">
+        <a href="/search" class="tooltip"
+          ><i class="fa-solid fa-magnifying-glass"
+            ><span class="tooltiptext">Search</span></i
+          ></a
+        >
+        <a href="/notification" class="tooltip"
+          ><i class="fa-solid fa-bell"
+            ><span class="tooltiptext">Notifications</span></i
+          ></a
+        >
+
+        <a href="/login" class="tooltip"
+          ><i class="fa-solid fa-user">
+            <span class="tooltiptext">Login</span>
+          </i></a
+        >
+        <div id="login-btn"></div>
+      </div>
+    </header>
+
+    <div class="vehicle" onclick="toggleIcon()">
+      <i id="icon" class="fa-solid fa-motorcycle"></i>
+    </div>
+
+    <div class="login-form-container">
+      <span class="fas fa-times" id="close-login-form"></span>
+      <form action="">
+        <h3>User Login</h3>
+        <input type="email" placeholder="email" class="box" />
+        <input type="password" placeholder="password" class="box" />
+        <p>Forget your password <a href="#">Click here</a></p>
+        <input type="Submit" value="Login now" class="btn" />
+        <p>or login with</p>
+        <div class="buttons">
+          <a href="#" class="btn">Google</a>
+          <a href="#" class="btn">Facebook</a>
+        </div>
+        <p>Don't have an account <a href="#">Create one</a></p>
+      </form>
+    </div>
+
+    <section class="home" id="home">
+      <h1 data-speed="-2">Find your Vehicle</h1>
+    </section>
+    <div class="contentParent">
+      <div class="content" style="background-color: white">
+        <div class="searchAndFilters">
+          <form action="/findBuy" method="GET">
+            <div class="searchBar">
+              <label for="carName"></label>
+              <input
+                type="text"
+                id="carName"
+                name="query"
+                placeholder="Enter Vehicle Name"
+                aria-label="Search for vehicles"
+              />
+              <button type="submit">Search</button>
+            </div>
+            <div class="filters">
+              <select name="location" id="location" class="filter">
+                <option value="">Select Location</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="chennai">Chennai</option>
+                <option value="banglore">Banglore</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+              </select>
+              <select name="type" id="type" class="filter">
+                <option value="">Select Vehicle Type</option>
+                <option value="car">Car</option>
+                <option value="bike">Bike</option>
+              </select>
+              <select name="budget" id="budget" class="filter">
+                <option value="">Select Budget</option>
+                <option value="Below 5,00,000">Below 5,00,000</option>
+                <option value="5,00,000 - 7,50,000">5,00,000 - 7,50,000</option>
+                <option value="7,50,000 - 10,00,000">
+                  7,50,000 - 10,00,000
+                </option>
+                <option value="10,00,000 - 20,00,000">
+                  10,00,000 - 20,00,000
+                </option>
+                <option value="20,00,000 - 30,00,000">
+                  20,00,000 - 30,00,000
+                </option>
+                <option value="30,00,000 - 50,00,000">
+                  30,00,000 - 50,00,000
+                </option>
+                <option value="Above 50,00,000">Above 50,00,000</option>
+              </select>
+              <select name="brand" id="brand">
+                <option value="">Select Brand</option>
+                <option value="tata">Tata</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="ford">Ford</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="hyundai">Hyundai</option>
+              </select>
+              <select id="year">
+                <option value="">Select Year</option>
+                <option value="0">All Years</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+              </select>
+              <select id="fuelType">
+                <option value="">Select Fuel Type</option>
+                <option value="All">All Fuel Types</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Electric">Electric</option>
+                <option value="Hybrid">Hybrid</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="explore_btn" id="explore_btn"></section>
+
+    <section class="vehicles" id="vehicles">
+      <h1 class="heading">Popular <span>Vehicles</span></h1>
+      <div class="swiper vehicles-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img
+              src="buy_and_sell_img/2019-Porsche-911-front_11248_032_2400x1800_0Q.png"
+              alt=""
+            />
+            <div class="content">
+              <h3>New model</h3>
+              <div class="price"><span>Price: </span> Rs.65,00,000</div>
+              <p>
+                New
+                <span class="fas fa-circle"></span> 2023
+                <span class="fas fa-circle"></span> Automatic
+                <span class="fas fa-circle"></span> Petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/img 2.jpeg" alt="" />
+            <div class="content">
+              <h3>New model</h3>
+              <div class="price"><span>Price: </span> Rs.65,00,000</div>
+              <p>
+                New
+                <span class="fas fa-circle"></span> 2023
+                <span class="fas fa-circle"></span> Automatic
+                <span class="fas fa-circle"></span> Petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/img 3.jpeg" alt="" />
+            <div class="content">
+              <h3>New model</h3>
+              <div class="price"><span>Price: </span> Rs.65,00,000</div>
+              <p>
+                New
+                <span class="fas fa-circle"></span> 2023
+                <span class="fas fa-circle"></span> Automatic
+                <span class="fas fa-circle"></span> Petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/img 4.jpg" alt="" />
+            <div class="content">
+              <h3>New model</h3>
+              <div class="price"><span>Price: </span> Rs.65,00,000</div>
+              <p>
+                New
+                <span class="fas fa-circle"></span> 2023
+                <span class="fas fa-circle"></span> Automatic
+                <span class="fas fa-circle"></span> Petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/download (1).jpeg" alt="" />
+            <div class="content">
+              <h3>New model</h3>
+              <div class="price"><span>Price: </span> Rs.65,00,000</div>
+              <p>
+                New
+                <span class="fas fa-circle"></span> 2023
+                <span class="fas fa-circle"></span> Automatic
+                <span class="fas fa-circle"></span> Petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/download (2).jpeg" alt="" />
+            <div class="content">
+              <h3>New model</h3>
+              <div class="price"><span>Price: </span> Rs.65,00,000</div>
+              <p>
+                New
+                <span class="fas fa-circle"></span> 2023
+                <span class="fas fa-circle"></span> Automatic
+                <span class="fas fa-circle"></span> Petrol
+                <span class="fas fa-circle"></span> 183mph
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h1 class="heading">Our <span> Services </span></h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-car"></i>
+          <h3>Car Selling</h3>
+          <p>
+            Don't miss your chance to own this exceptional 2023 [Car Make] [Car
+            Model]. Contact us today to schedule a test drive and experience the
+            thrill for yourself. Our knowledgeable team is here to assist you
+            with any questions and guide you through the buying process.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-tools"></i>
+          <h3>Parts Repair</h3>
+          <p>
+            Schedule your car parts repair service with your wheels today, and
+            trust us to get your vehicle back on the road in optimal condition.
+            Contact our service team to book an appointment or inquire about our
+            range of repair services. Your car deserves the best .
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-car-crash"></i>
+          <h3>Car Insurance</h3>
+          <p>
+            Don't leave your vehicle's protection to chance. Contact your
+            wheels's insurance experts today to discuss your car insurance
+            needs. We're committed to providing you with the peace of mind you
+            deserve on every journey. Your safety and security are our top
+            priorities!.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-car-battery"></i>
+          <h3>Battery Replacement</h3>
+          <p>
+            Is your vehicle showing signs of a weak or failing battery? Don't
+            let a dead battery leave you stranded. Contact your wheels today to
+            schedule your battery inspection and replacement service. We're here
+            to ensure your vehicle starts reliably and keeps you confidence.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-gas-pump"></i>
+          <h3>Oil Change</h3>
+          <p>
+            Don't delay your vehicle's much-needed oil change. Contact your
+            wheels today to schedule your oil change service. Our goal is to
+            help you maintain the heart of your vehicle, ensuring it performs at
+            its best mile after mile. Trust us for all for your support, and
+            time.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>
+            At your wheels, our commitment to your satisfaction extends beyond
+            regular business hours. Experience the convenience and peace of mind
+            of 24/7 support by choosing us for all your automotive needs. We're
+            here to serve you around the clock,& good service
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <h1 class="heading"><span> Featured </span> cars</h1>
+      <div class="swiper featured-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 1.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 2.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 3.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 4.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="swiper featured-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 5.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 10.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 8.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="buy_and_sell_img/photo 9.jpeg" alt="" />
+            <h3>New Model</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">Rs.55,00,000/-</div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="js/buy_and_sell.js"></script>
+    <script src="js/buy_and_sell_script.js"></script>
+  </body>
+</html>
